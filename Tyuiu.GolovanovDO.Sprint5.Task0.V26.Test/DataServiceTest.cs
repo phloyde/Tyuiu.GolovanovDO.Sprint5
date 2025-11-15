@@ -6,7 +6,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\Users\0\source\repos\Tyuiu.GolovanovDO.Sprint5\Tyuiu.GolovanovDO.Sprint5.Task0.V26\bin\Debug\net8.0\OutPutFileTask0.txt";
+            string path = @"C:\Users\0\AppData\Local\Temp\OutPutFileTask0.txt";
             FileInfo  fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;
