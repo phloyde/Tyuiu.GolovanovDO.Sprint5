@@ -7,8 +7,8 @@ namespace Tyuiu.GolovanovDO.Sprint5.Task7.V19.Lib
         {
             string str = File.ReadAllText(path);
 
-            str = str.Replace("сс", "с");
-            str = str.Replace("Сс", "С");
+            str = str.Replace("сс", "");
+            str = str.Replace("Сс", "");
 
             return str;
         }
