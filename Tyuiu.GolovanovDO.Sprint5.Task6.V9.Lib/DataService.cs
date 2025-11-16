@@ -1,30 +1,29 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Runtime.Intrinsics.X86;
+using System.IO;
+using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.GolovanovDO.Sprint5.Task6.V9.Lib
 {
     public class DataService : ISprint5Task6V9
     {
         public int LoadFromDataFile(string path)
         {
-            int res = 0;
-            using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    // Разбиваем строку на числа по пробелам
-                    string[] numberStrings = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            string str = File.ReadAllText(path);
 
-                    foreach (string numberStr in numberStrings)
-                    {
-                        if (numberStr.Length == 3)
-                        {
-                            res++;
-                        }
-                    }
+            str = str.Replace(",", "");
+
+            string[] sTring = str.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            int cnt = 0;
+            foreach (string s in sTring)
+            {
+                if (s.Length == 3)
+                {
+                    cnt++;
                 }
             }
-            return res;
+            return cnt;
         }
+        
 
 
     }
