@@ -6,7 +6,7 @@
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\Users\0\AppData\Local\Temp\InPutDataFileTask4V0.txt";
+            string path = @"C:\Users\0\AppData\Local\Temp\InPutDataFileTask4V1.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;

@@ -6,10 +6,11 @@ internal class Program
     {
         DataService ds = new DataService();
 
-        string path = @"C:\Users\0\AppData\Local\Temp\InPutDataFileTask4V0.txt";
+        string path = @"C:\Users\0\AppData\Local\Temp\InPutDataFileTask4V1.txt";
 
 
-        Console.WriteLine("Данные находятся в файле: ");
+        Console.WriteLine("Данные находятся в файле: " + path);
+        Console.WriteLine();
 
         double res = ds.LoadFromDataFile(path);
         Console.WriteLine(res);
